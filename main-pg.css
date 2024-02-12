@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    background-color: #ecf8f8;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    background-color: rgb(120, 167, 228);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+ .logo {
+    width: 90px;
+}
+ .welcome-title {
+    font-style: italic;
+    font-weight: 900;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
+}
+
+header ul a {
+    text-decoration: none;
+    color: rgb(64, 65, 8);
+}
+
+.burger-btn {
+    all: unset;
+    cursor: pointer;
+    display: none;
+  }
+
+  .mobile-menu {
+    background-color: cadetblue;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    display: none;
+    transition: 0.4s;
+  
+    nav 
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-top: 4rem;
+      }
+  }
+
+  .active {
+    left: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    gap: 2rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    border: 2px black solid;
+    padding: 1rem;
+    gap: 0.5rem;
+
+    h2{
+        margin: 5px;
+    }
+  }
+
+  .card img {
+    width:80%;
+  }
+
+  @media screen and (max-width: 768px) {
+    header nav ul {
+      display: none;
+    }
+  
+    .burger-btn {
+      display: inline-block;
+    }
+
+    .mobile-menu {
+        display: inline-block;
+      }
+
+    .card h2 {
+        margin: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .logo{
+      display: none;
+    }
+}
