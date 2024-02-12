@@ -1,14 +1,22 @@
 const wrapper = document.getElementById('wrapper');
+const burgerButton = document.getElementById('burger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
 const fetchCars = async () => {
     const response = await fetch(
         "https://65c5d0cae5b94dfca2e056ff.mockapi.io/cars"
     );
-
     const cars = await response.json();
+    console.log(cars)
 
     cars.forEach((car) => {
-        const card = document.createElement('div');
+        const card = document.createElement('a');
+        card.href = "./card-pg/card-pg.html"
+        card.addEventListener('click', () => {
+            console.log(car.Make)
+            localStorage.setItem('carId', car.id)
+        });
+        
         card.setAttribute('class', 'card');
 
         const img = document.createElement('img');
@@ -28,6 +36,10 @@ const fetchCars = async () => {
 
         wrapper.append(card);
     })
-}
+    burgerButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active')
+    })
+    
+};
 
 fetchCars()
