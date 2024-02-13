@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main-pg.css">
-    <title>Cars main page</title>
+    <link rel="stylesheet" href="post-add-pg.css">
+    <title>Post add page</title>
 </head>
 <body>
-
     <header>
         <div class="intro">
             <img class="logo" src="car-logo.png" alt="car-logo">
@@ -16,8 +15,8 @@
 
         <nav>
             <ul>
-                <li><a href="./index.html">Main Page</a></li>
-                <li><a href="./post-add-pg/post-add-pg.html">Post Your Add</a></li>
+                <li><a href="../index.html">Main Page</a></li>
+                <li><a href="/post-add-pg/post-add-pg.html">Post Your Add</a></li>
                 <li><a href="#">Sign In</a></li>
             </ul>
 
@@ -27,22 +26,30 @@
         </nav>
     </header>
 
-
     <div id="mobile-menu" class="mobile-menu">
         <nav>
             <ul>
-                <li><a href="./index.html">Main Page</a></li>
-                <li><a href="./post-add-pg/post-add-pg.html">Post Your Add</a></li>
+                <li><a href="/index.html">Main Page</a></li>
+                <li><a href="/post-add-pg/post-add-pg.html">Post Your Add</a></li>
                 <li><a href="#">Sign In</a></li>
             </ul>
         </nav>
     </div>
 
-    <a id="wrapper" class="wrapper"></a>
+    <div class="form">
+        <input placeholder="Image Url" id="image"/>
+        <input placeholder="Make" id="make"/>
+        <input placeholder="Model" id="model"/>
+        <input placeholder="Fuel" id="fuel"/>
+        <input placeholder="Description" id="description"/>
+        <input placeholder="Price" id="price"/>
+        <input placeholder="Location" id="locationEl"/>
 
+        <button id="btn">Post Add</button>
+    </div>
 
+    <div id="message" class="message"></div>
 
-
-    <script src="main-pg.js"></script>
+    <script src="post-add-pg.js"></script>
 </body>
 </html>
