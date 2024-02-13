@@ -72,32 +72,8 @@ header ul li a {
     left: 0;
   }
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 30%;
-    margin: auto;
-    padding-top: 5rem;
-  }
-  
-  .form input {
-    padding: 0.4rem;
-  }
-  
-  .form button {
-    padding: 0.8rem;
-    border-radius: 40px;
-    cursor: pointer;
-  }
-  
-  .message{
-    color: rgb(15, 8, 39);
-    text-align: center;
-    padding-top: 2rem;
-  }
-
-  footer{
+footer{
+    margin-bottom: 0;
     background-color: rgb(120, 167, 228);
     display: flex; 
      div ul{
@@ -109,7 +85,8 @@ header ul li a {
         text-decoration: none;
         color: rgb(64, 65, 8);
     }}
-}
+  }
+
 
   @media screen and (max-width: 768px) {
     header nav ul {
@@ -129,8 +106,9 @@ header ul li a {
         .logo{
           display: none;
         }
-        footer div ul{
-            display: flex;
-            flex-direction: column;
-      }
+
+    footer div ul{
+          display: flex;
+          flex-direction: column;
+    }
     }

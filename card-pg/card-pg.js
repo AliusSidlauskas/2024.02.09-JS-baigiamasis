@@ -45,7 +45,7 @@ deleteButton.addEventListener('click', async() => {
   }
   );
   const car = await response.json();
-  message.innerHTML = 'Add has been deleted successfully'
+  message.innerText = 'Add has been deleted successfully'
 
   setTimeout(() => {
     window.location.assign("/index.html");

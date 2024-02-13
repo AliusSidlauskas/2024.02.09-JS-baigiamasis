@@ -7,13 +7,15 @@ const fetchCars = async () => {
         "https://65c5d0cae5b94dfca2e056ff.mockapi.io/cars"
     );
     const cars = await response.json();
-    console.log(cars)
+    // console.log(cars)
+
+    cars.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
 
     cars.forEach((car) => {
         const card = document.createElement('a');
         card.href = "./card-pg/card-pg.html"
         card.addEventListener('click', () => {
-            console.log(car.Make)
+            // console.log(car.Make)
             localStorage.setItem('carId', car.id)
         });
         

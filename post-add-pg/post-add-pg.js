@@ -12,9 +12,21 @@ const locationEl = document.getElementById("locationEl");
 const button = document.getElementById("btn");
 const message = document.getElementById('message');
 
+const imageUrlRegex = /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp))$|^([a-zA-Z]:\\(?:\w+\\)*\w+\.(?:png|jpg|jpeg|gif|bmp))$/;
+const priceRegex = /^\d+(\.\d{2})?$/;
+
 button.addEventListener('click', async () => {
-    // console.log('kaip')
+    // console.log('check')
+    if (!imageUrlRegex.test(image.value)) {
+        message.innerText = 'Check image URL';
+        return;
+    }
+    if (!priceRegex.test(price.value)) {
+        message.innerText = 'Check price format';
+        return;
+    }
     if(!image.value || !make.value || !model.value || !fuel.value || !description.value || !price.value || !locationEl.value){
+        message.innerText = 'Fill all empty fields'
         return
     };
     const carData = {
@@ -38,7 +50,7 @@ button.addEventListener('click', async () => {
 })
 const addedCar = await response.json();
 
-    message.innerHTML = 'Add has been added successfully'
+    message.innerText = 'Add has been added successfully'
     
     setTimeout(() => {
     window.location.assign("/index.html");
