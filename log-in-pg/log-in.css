@@ -72,10 +72,47 @@ header ul li a {
     left: 0;
   }
 
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form input {
+    padding: 0.5rem;
+  }
+  
+  .form button {
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .successMessage {
+    color: rgb(8, 103, 8);
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  .warningMessage {
+    color: rgb(138, 26, 26);
+    text-align: center;
+    padding-top: 2rem;
+  }
+
 footer{
-    margin-bottom: 0;
-    background-color: rgb(120, 167, 228);
-    display: flex; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(120, 167, 228);
+  display: flex; 
      div ul{
       display: flex;
       flex-direction: row;
