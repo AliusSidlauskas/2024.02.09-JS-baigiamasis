@@ -11,32 +11,34 @@ header {
     justify-content: space-between;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-}
 
-.intro {
+  .intro {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
- .logo {
+
+  .logo {
     width: 90px;
-}
- .welcome-title {
+
+  .welcome-title {
     font-style: italic;
     font-weight: 900;
-}
+        }
+      }
+    }
+  }
 
 header ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 1rem;
-}
 
-header ul li a {
+  li a {
     text-decoration: none;
     color: rgb(64, 65, 8);
-}
+    } 
+  }
 
 .burger-btn {
     all: unset;
@@ -53,18 +55,19 @@ header ul li a {
     display: none;
     transition: 0.2s;
     
-    nav 
-    ul {
+    nav ul {
       display: flex;
       flex-direction: column;
       align-items: left;
       gap: 2rem;
       padding-top: 2rem;
       list-style: none;
-    }
+    
+
     li a{
       text-decoration: none;
       color: rgb(64, 65, 8);
+      }
     }
   }
 
@@ -85,31 +88,37 @@ header ul li a {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
+    box-shadow: 10px 5px 25px rgb(177, 177, 185);
 
     .image{
     width: 80%;
-  }
+    }
+
     .car-description{
       color: rgb(64, 65, 8);
-     h2{
+     
+      h2{
       margin: 10px;
      }; 
+     
      h3{
       margin: 10px;
      }
+     
      p{
       margin: 10px;
      }
+     
      h4{
       margin: 10px;
      }
     }
+    
     .delete-button{
       border-radius: 50px;
       margin-left: auto;
       cursor: pointer;
     }
- 
   }
 
   .message{
@@ -121,15 +130,18 @@ header ul li a {
   footer{
     background-color: rgb(120, 167, 228);
     display: flex; 
-     div ul{
+    
+    div ul{
       display: flex;
       flex-direction: row;
       gap: 1rem;
       list-style: none;
-      li a{
+    
+     li a{
         text-decoration: none;
         color: rgb(64, 65, 8);
-    }}
+      }
+    }
   }
 
 
@@ -155,5 +167,7 @@ header ul li a {
     footer div ul{
           display: flex;
           flex-direction: column;
+          gap:5px;
+          margin:0
     }
     }

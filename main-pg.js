@@ -2,6 +2,10 @@ const wrapper = document.getElementById('wrapper');
 const burgerButton = document.getElementById('burger-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
+burgerButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active')
+})
+
 const fetchCars = async () => {
     const response = await fetch(
         "https://65c5d0cae5b94dfca2e056ff.mockapi.io/cars"
@@ -37,11 +41,7 @@ const fetchCars = async () => {
         card.append(price);
 
         wrapper.append(card);
-    })
-    burgerButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active')
-    })
-    
+    })  
 };
 
 fetchCars()
