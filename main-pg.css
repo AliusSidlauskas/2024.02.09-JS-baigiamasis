@@ -80,8 +80,9 @@ header ul {
     align-items: center;
     margin: 1rem;
     gap: 2rem;
-  
-  .card {
+    
+    .card {
+    background-color: rgb(223, 227, 230);
     display: flex;
     flex-direction: column;
     align-items: center;
